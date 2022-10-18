@@ -32,3 +32,6 @@ SELECT DISTINCT maker FROM product JOIN pc ON (pc.speed >= 450 AND product.model
 --11
 SELECT AVG(speed) FROM pc
 
+
+--12
+SELECT AVG(speed) FROM laptop WHERE price > 1000
