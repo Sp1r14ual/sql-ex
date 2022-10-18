@@ -22,26 +22,20 @@ SELECT DISTINCT pc.model, pc.price FROM pc JOIN product ON (product.model = pc.m
 --8
 SELECT maker FROM product WHERE type='pc' EXCEPT SELECT maker FROM product WHERE type='laptop'
 
-
 --9
 SELECT DISTINCT maker FROM product JOIN pc ON (pc.speed >= 450 AND product.model = pc.model)
-
 
 --10
 SELECT model, price FROM printer WHERE price IN (SELECT MAX(price) FROM printer)
 
-
 --11
 SELECT AVG(speed) FROM pc
-
 
 --12
 SELECT AVG(speed) FROM laptop WHERE price > 1000
 
-
 --13
 SELECT AVG(speed) FROM pc JOIN product ON pc.model = product.model AND product.maker='A'
-
 
 --14
 SELECT ships.class, ships.name, classes.country FROM classes JOIN ships ON (ships.class = classes.class AND classes.numGuns >= 10)
