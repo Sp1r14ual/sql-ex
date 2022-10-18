@@ -39,3 +39,6 @@ SELECT AVG(speed) FROM pc JOIN product ON pc.model = product.model AND product.m
 
 --14
 SELECT ships.class, ships.name, classes.country FROM classes JOIN ships ON (ships.class = classes.class AND classes.numGuns >= 10)
+
+--15
+SELECT hd FROM pc GROUP BY hd HAVING COUNT(model) >= 2
