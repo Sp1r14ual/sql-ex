@@ -20,6 +20,7 @@ SELECT DISTINCT product.maker, laptop.speed from product JOIN laptop ON (laptop.
 SELECT DISTINCT pc.model, pc.price FROM pc JOIN product ON (product.model = pc.model AND product.maker='B') UNION SELECT DISTINCT laptop.model, laptop.price FROM laptop JOIN product ON (product.model = laptop.model AND product.maker='B') UNION SELECT DISTINCT printer.model, printer.price FROM printer JOIN product ON (product.model = printer.model AND product.maker='B')
 
 --8
+SELECT maker FROM product WHERE type='pc' EXCEPT SELECT maker FROM product WHERE type='laptop'
 
 
 --9
