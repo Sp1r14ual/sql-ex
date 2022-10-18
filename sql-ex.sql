@@ -41,3 +41,7 @@ SELECT AVG(speed) FROM laptop WHERE price > 1000
 
 --13
 SELECT AVG(speed) FROM pc JOIN product ON pc.model = product.model AND product.maker='A'
+
+
+--14
+SELECT ships.class, ships.name, classes.country FROM classes JOIN ships ON (ships.class = classes.class AND classes.numGuns >= 10)
