@@ -35,3 +35,7 @@ SELECT AVG(speed) FROM pc
 
 --12
 SELECT AVG(speed) FROM laptop WHERE price > 1000
+
+
+--13
+SELECT AVG(speed) FROM pc JOIN product ON pc.model = product.model AND product.maker='A'
