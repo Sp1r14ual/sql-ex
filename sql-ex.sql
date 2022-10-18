@@ -25,3 +25,10 @@ SELECT DISTINCT pc.model, pc.price FROM pc JOIN product ON (product.model = pc.m
 --9
 SELECT DISTINCT maker FROM product JOIN pc ON (pc.speed >= 450 AND product.model = pc.model)
 
+
+--10
+
+
+--11
+SELECT AVG(speed) FROM pc
+
