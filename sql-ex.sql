@@ -42,3 +42,6 @@ SELECT ships.class, ships.name, classes.country FROM classes JOIN ships ON (ship
 
 --15
 SELECT hd FROM pc GROUP BY hd HAVING COUNT(model) >= 2
+
+--16
+SELECT DISTINCT first.model, second.model, first.speed, first.ram FROM pc as first, pc as second WHERE first.model > second.model AND first.speed = second.speed AND first.ram = second.ram
